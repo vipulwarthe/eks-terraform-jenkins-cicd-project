@@ -11,16 +11,16 @@ terraform {
     # These values must be passed during 'terraform init'
     # Example:
     # terraform init \
-    #   -backend-config="bucket=my-jenkins-tfstate-bucket" \
+    #   -backend-config="bucket=jenkins-tfstate-bucket-1617" \
     #   -backend-config="key=jenkins/terraform.tfstate" \
     #   -backend-config="region=us-east-1" \
     #   -backend-config="dynamodb_table=terraform-locks" \
     #   -backend-config="encrypt=true"
 
-    bucket         = ""
-    key            = ""
-    region         = ""
-    dynamodb_table = ""
+    bucket         = "jenkins-tfstate-bucket-1617"
+    key            = "jenkins/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
     encrypt        = true
   }
 }
