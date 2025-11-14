@@ -1,10 +1,10 @@
 variable "aws_region" {
-  description = "us-east-1"
+  description = "AWS region where the infrastructure will be deployed"
   type        = string
 }
 
 variable "aws_account_id" {
-  description = "717279727098"
+  description = "AWS Account ID"
   type        = string
 }
 
