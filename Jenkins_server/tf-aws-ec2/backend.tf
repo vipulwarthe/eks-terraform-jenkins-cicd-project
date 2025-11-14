@@ -25,12 +25,3 @@ terraform {
   }
 }
 
-# this is the command to initilize the backend:
-
-
-# terraform init \
-#  -backend-config="bucket=jenkins-prod-tfstate" \
-#  -backend-config="key=jenkins/terraform.tfstate" \
-#  -backend-config="region=us-east-1" \
-#  -backend-config="dynamodb_table=tf-locks" \
-#  -backend-config="encrypt=true"
