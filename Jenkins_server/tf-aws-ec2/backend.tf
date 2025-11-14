@@ -20,8 +20,10 @@ terraform {
     bucket         = "jenkins-tfstate-bucket-1617"
     key            = "jenkins/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
     encrypt        = true
   }
 }
 
+    # Optional but recommended:   add below dynamodb table line beore "encryt"
+    # dynamodb_table = "terraform-locks"
+    # encrypt        = true
