@@ -1,0 +1,29 @@
+###############################################
+# Kubernetes Deployment Command Script
+# For EKS Cluster Deployment
+###############################################
+
+# Update these variables
+AWS_REGION="us-east-1"
+CLUSTER_NAME="my-eks-cluster"
+
+# Configure kubeconfig for EKS
+aws eks update-kubeconfig --region $AWS_REGION --name $CLUSTER_NAME
+
+# Apply Deployment
+kubectl apply -f manifest/deployment.yaml
+
+# Apply Service
+kubectl apply -f manifest/service.yaml
+
+# Check Pods
+kubectl get pods -o wide
+
+# Check Deployment
+kubectl get deployment nginx -o wide
+
+# Check Service
+kubectl get service nginx -o wide
+
+# Watch LoadBalancer External IP
+kubectl get svc nginx --watch
